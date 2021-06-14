@@ -5,6 +5,9 @@ const app = express();
 const port = process.env.PORT || 8000;
 const routes = require('./src/routes');
 const db = require('./config/db');
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
